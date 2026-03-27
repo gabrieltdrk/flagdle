@@ -1,4 +1,5 @@
 import { NavLink } from "../components/nav-link";
+import { Header } from "../components/header";
 import { SiteFooter } from "../layouts/site-footer";
 import { categoryCards } from "../utils/category-cards";
 
@@ -12,15 +13,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-52 rounded-t-[4rem] bg-gradient-to-t from-sky-300/50 via-sky-100/30 to-transparent" />
       <div className="pointer-events-none absolute inset-x-10 bottom-14 h-24 rounded-full bg-sky-200/35 blur-3xl" />
 
-      <header className="relative z-10 flex flex-col items-center pt-2 text-center">
-        <h1 className="logo-title text-6xl font-black tracking-tight text-amber-400 md:text-8xl select-none">
-          Flagdle
-        </h1>
-        <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-700/90 md:text-base">
-          Escolhe um modo de jogo e tenta descobrir a bandeira certa antes das
-          tentativas acabarem.
-        </p>
-      </header>
+      <Header
+        onNavigate={onNavigate}
+        title="Flagdle"
+      />
 
       <section className="relative z-10 flex flex-1 items-center justify-center py-10 md:py-14">
         <div className="w-full max-w-4xl rounded-[2.25rem] border border-sky-300/70 bg-slate-50/78 p-5 shadow-2xl shadow-sky-900/10 backdrop-blur md:p-7">

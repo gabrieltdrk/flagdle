@@ -15,11 +15,11 @@ export function SiteFooter({ compact = false, onNavigate }: SiteFooterProps) {
       <NavLink
         href="/privacy"
         onNavigate={onNavigate}
-        className="rounded-full border border-white/15 bg-slate-950/55 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-slate-100"
+        className="rounded-full border border-sky-200 bg-slate-50/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-slate-700"
       >
         Politica de privacidade
       </NavLink>
-      <p className="max-w-xl text-xs leading-6 text-slate-200/70">
+      <p className="max-w-xl text-xs leading-6 text-slate-600/80">
         Flagdle e um projeto independente inspirado em jogos diarios de adivinhacao.
       </p>
     </footer>

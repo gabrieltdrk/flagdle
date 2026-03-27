@@ -61,30 +61,30 @@ export function DailyGame() {
 
   return (
     <>
-      <section className="mb-5 grid gap-4 rounded-[2rem] border border-white/10 bg-slate-950/70 p-5 shadow-2xl shadow-black/30 backdrop-blur lg:grid-cols-[220px_1fr] lg:p-6">
+      <section className="mb-5 grid gap-4 rounded-[2rem] border border-sky-300/70 bg-slate-50/78 p-5 shadow-2xl shadow-sky-900/10 backdrop-blur lg:grid-cols-[220px_1fr] lg:p-6">
         <div>
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-300">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-500">
             Desafio diario
           </p>
-          <h1 className="text-3xl font-black tracking-tight md:text-5xl">
+          <h1 className="text-3xl font-black tracking-tight text-slate-800 md:text-5xl">
             {formatDateLabel(dateKey)}
           </h1>
-          <p className="mt-3 text-slate-300">
+          <p className="mt-3 text-slate-600">
             Tente descobrir o pais secreto em ate {maxGuesses} palpites.
           </p>
         </div>
       </section>
 
       <section className="grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
-        <article className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-5 shadow-2xl shadow-black/30 backdrop-blur lg:p-6">
+        <article className="rounded-[2rem] border border-sky-300/70 bg-slate-50/78 p-5 shadow-2xl shadow-sky-900/10 backdrop-blur lg:p-6">
           <div className="mb-5 flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-300">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-500">
                 Modo /daily
               </p>
-              <h2 className="text-2xl font-black tracking-tight">Pais secreto de hoje</h2>
+              <h2 className="text-2xl font-black tracking-tight text-slate-800">Pais secreto de hoje</h2>
             </div>
-            <span className="rounded-full bg-white/8 px-4 py-2 text-sm font-bold text-slate-200">
+            <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-bold text-slate-700">
               {gameState.guesses.length}/{maxGuesses}
             </span>
           </div>
@@ -93,10 +93,10 @@ export function DailyGame() {
             {categoryCards.map((card) => (
               <article
                 key={card.label}
-                className="rounded-[1.4rem] border border-white/8 bg-white/5 p-4"
+                className="rounded-[1.4rem] border border-sky-200 bg-white/72 p-4"
               >
-                <strong className="block text-sm text-slate-50">{card.label}</strong>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{card.detail}</p>
+                <strong className="block text-sm text-slate-800">{card.label}</strong>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{card.detail}</p>
               </article>
             ))}
           </div>
@@ -108,7 +108,7 @@ export function DailyGame() {
             }}
             className="mb-6"
           >
-            <label htmlFor="country-input" className="mb-3 block text-sm font-bold text-slate-100">
+            <label htmlFor="country-input" className="mb-3 block text-sm font-bold text-slate-700">
               Seu palpite
             </label>
             <div className="flex flex-col gap-3 md:flex-row">
@@ -123,7 +123,7 @@ export function DailyGame() {
                     setMessage("");
                   }}
                   placeholder="Digite um pais"
-                  className="min-h-14 w-full rounded-3xl border border-white/10 bg-slate-950/90 px-5 text-base text-slate-50 outline-none placeholder:text-slate-500 focus:border-sky-400/60"
+                  className="min-h-14 w-full rounded-3xl border border-sky-200 bg-white/92 px-5 text-base text-slate-800 outline-none placeholder:text-slate-400 focus:border-sky-400/60"
                 />
                 {suggestions.length > 0 ? (
                   <div className="absolute left-0 right-0 top-[calc(100%+10px)] z-10 grid gap-2">
@@ -135,7 +135,7 @@ export function DailyGame() {
                           setQuery(country.name);
                           setMessage("");
                         }}
-                        className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-left text-sm text-slate-100"
+                        className="flex items-center gap-3 rounded-2xl border border-sky-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700"
                       >
                         <span className="text-xl">{country.flag}</span>
                         <span>{country.name}</span>
@@ -152,7 +152,7 @@ export function DailyGame() {
                 Enviar
               </button>
             </div>
-            <p className="mt-3 text-sm leading-6 text-slate-300">
+            <p className="mt-3 text-sm leading-6 text-slate-600">
               Digite o nome do pais. Tambem aceitamos algumas variantes como "EUA",
               "UK" e "Holanda".
             </p>
@@ -160,7 +160,7 @@ export function DailyGame() {
           </form>
 
           <div className="space-y-3">
-            <div className="hidden grid-cols-[1.2fr_repeat(5,minmax(0,1fr))] gap-3 rounded-[1.4rem] border border-white/8 bg-white/4 p-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 xl:grid">
+            <div className="hidden grid-cols-[1.2fr_repeat(5,minmax(0,1fr))] gap-3 rounded-[1.4rem] border border-sky-200 bg-white/70 p-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-500 xl:grid">
               <span>Pais</span>
               <span>Continente</span>
               <span>Cores</span>
@@ -170,9 +170,9 @@ export function DailyGame() {
             </div>
 
             {gameState.guesses.length === 0 ? (
-              <div className="rounded-[1.4rem] border border-white/8 bg-white/5 p-5">
-                <strong className="block text-slate-50">Nenhum palpite ainda.</strong>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+              <div className="rounded-[1.4rem] border border-sky-200 bg-white/72 p-5">
+                <strong className="block text-slate-800">Nenhum palpite ainda.</strong>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   Comece por um pais que te ajude a testar continentes e combinacoes
                   de cores.
                 </p>
@@ -184,25 +184,25 @@ export function DailyGame() {
                 return (
                   <article
                     key={guess.code}
-                    className="grid gap-3 rounded-[1.5rem] border border-white/8 bg-white/4 p-3 xl:grid-cols-[1.2fr_repeat(5,minmax(0,1fr))]"
+                    className="grid gap-3 rounded-[1.5rem] border border-sky-200 bg-white/68 p-3 xl:grid-cols-[1.2fr_repeat(5,minmax(0,1fr))]"
                   >
-                    <div className="rounded-3xl border border-white/8 bg-white/4 p-4">
+                    <div className="rounded-3xl border border-sky-200 bg-white/85 p-4">
                       <div className="flex items-center gap-3">
                         <span className="text-3xl">{guess.flag}</span>
                         <div>
-                          <strong className="block text-slate-50">{guess.name}</strong>
-                          <p className="text-sm text-slate-400">{guess.code}</p>
+                          <strong className="block text-slate-800">{guess.name}</strong>
+                          <p className="text-sm text-slate-500">{guess.code}</p>
                         </div>
                       </div>
                     </div>
 
                     <ToneCell status={feedback.continent}>
-                      <strong className="block text-slate-50">{guess.continent}</strong>
+                      <strong className="block text-slate-800">{guess.continent}</strong>
                     </ToneCell>
 
                     <ToneCell status={feedback.colors.status}>
-                      <strong className="block text-slate-50">{guess.colors.join(", ")}</strong>
-                      <p className="mt-2 text-sm text-slate-300">
+                      <strong className="block text-slate-800">{guess.colors.join(", ")}</strong>
+                      <p className="mt-2 text-sm text-slate-600">
                         {feedback.colors.status === "exact"
                           ? "Paleta completa."
                           : feedback.colors.status === "close"
@@ -212,25 +212,25 @@ export function DailyGame() {
                     </ToneCell>
 
                     <ToneCell status={feedback.population.status}>
-                      <strong className="block text-slate-50">
+                      <strong className="block text-slate-800">
                         {formatPopulation(guess.population)}
                       </strong>
-                      <p className="mt-2 text-sm text-slate-300">
+                      <p className="mt-2 text-sm text-slate-600">
                         {getDirectionText(feedback.population.direction)}
                       </p>
                     </ToneCell>
 
                     <ToneCell status={feedback.area.status}>
-                      <strong className="block text-slate-50">
+                      <strong className="block text-slate-800">
                         {formatArea(guess.area)} km2
                       </strong>
-                      <p className="mt-2 text-sm text-slate-300">
+                      <p className="mt-2 text-sm text-slate-600">
                         {getDirectionText(feedback.area.direction)}
                       </p>
                     </ToneCell>
 
                     <ToneCell status={feedback.hemisphere}>
-                      <strong className="block text-slate-50">{guess.hemisphere}</strong>
+                      <strong className="block text-slate-800">{guess.hemisphere}</strong>
                     </ToneCell>
                   </article>
                 );
@@ -239,15 +239,15 @@ export function DailyGame() {
           </div>
         </article>
 
-        <aside className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-5 shadow-2xl shadow-black/30 backdrop-blur lg:p-6">
+        <aside className="rounded-[2rem] border border-sky-300/70 bg-slate-50/78 p-5 shadow-2xl shadow-sky-900/10 backdrop-blur lg:p-6">
           <div className="mb-5">
-            <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-300">
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-500">
               Regras rapidas
             </p>
-            <h2 className="text-2xl font-black tracking-tight">Como ler as pistas</h2>
+            <h2 className="text-2xl font-black tracking-tight text-slate-800">Como ler as pistas</h2>
           </div>
 
-          <ul className="space-y-3 text-sm leading-6 text-slate-300">
+          <ul className="space-y-3 text-sm leading-6 text-slate-600">
             <LegendItem color="bg-emerald-400" text="Verde: combinacao exata." />
             <LegendItem
               color="bg-amber-300"
@@ -256,27 +256,27 @@ export function DailyGame() {
             <LegendItem color="bg-slate-500" text="Escuro: nao corresponde ao alvo." />
           </ul>
 
-          <div className="mt-5 rounded-[1.4rem] border border-white/8 bg-white/5 p-5">
+          <div className="mt-5 rounded-[1.4rem] border border-sky-200 bg-white/72 p-5">
             {gameState.won ? (
               <>
-                <p className="text-base font-bold text-slate-50">Voce acertou.</p>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <p className="text-base font-bold text-slate-800">Voce acertou.</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   O pais secreto de hoje era <strong>{target.name}</strong>. Volte
                   amanha para um novo desafio.
                 </p>
               </>
             ) : gameState.guesses.length >= maxGuesses ? (
               <>
-                <p className="text-base font-bold text-slate-50">Tentativas encerradas.</p>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <p className="text-base font-bold text-slate-800">Tentativas encerradas.</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   O pais secreto de hoje era <strong>{target.name}</strong>. Amanha
                   tem outro.
                 </p>
               </>
             ) : (
               <>
-                <p className="text-base font-bold text-slate-50">Jogo em andamento.</p>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <p className="text-base font-bold text-slate-800">Jogo em andamento.</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   Restam <strong>{maxGuesses - gameState.guesses.length}</strong> palpites
                   para descobrir o pais.
                 </p>
@@ -285,16 +285,16 @@ export function DailyGame() {
           </div>
 
           <div className={`mt-5 ${isFinished ? "opacity-100" : "opacity-70"}`}>
-            <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-300">
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-amber-500">
               Resposta
             </p>
-            <div className="flex items-center gap-4 rounded-[1.4rem] border border-white/8 bg-white/5 p-5">
+            <div className="flex items-center gap-4 rounded-[1.4rem] border border-sky-200 bg-white/72 p-5">
               <span className="text-4xl">{isFinished ? target.flag : "🏳️"}</span>
               <div>
-                <strong className="block text-slate-50">
+                <strong className="block text-slate-800">
                   {isFinished ? target.name : "Pais oculto"}
                 </strong>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   {isFinished
                     ? `${target.continent} | ${formatPopulation(target.population)} habitantes`
                     : "A resposta aparece quando voce vence ou esgota as tentativas."}

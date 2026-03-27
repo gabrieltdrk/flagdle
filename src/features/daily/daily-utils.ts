@@ -113,12 +113,12 @@ export function getDirectionText(direction: NumericFeedback["direction"]): strin
 
 export function getToneClasses(status: GuessFeedback["continent"] | GuessFeedback["colors"]["status"]): string {
   if (status === "exact") {
-    return "border-emerald-400/40 bg-emerald-400/15";
+    return "border-emerald-300 bg-emerald-100";
   }
 
   if (status === "close") {
-    return "border-amber-300/40 bg-amber-300/15";
+    return "border-amber-300 bg-amber-100";
   }
 
-  return "border-slate-500/30 bg-slate-900/80";
+  return "border-slate-200 bg-white/85";
 }

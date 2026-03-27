@@ -1,22 +1,29 @@
 @import "tailwindcss";
 
+* {
+  font-family: "Mulish", sans-serif;
+}
+
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(34, 95, 171, 0.28), transparent 30%),
-    radial-gradient(circle at top right, rgba(255, 138, 61, 0.2), transparent 30%),
-    linear-gradient(180deg, #08111c 0%, #040910 100%);
-  color: #f5f7fb;
+    radial-gradient(circle at top left, rgba(74, 130, 205, 0.28), transparent 30%),
+    radial-gradient(circle at top right, rgba(245, 191, 124, 0.22), transparent 30%),
+    linear-gradient(180deg, #edf4fb 0%, #dfeaf6 58%, #d5e3f0 100%);
+  color: #17324d;
 }
 
 body {
   min-height: 100vh;
+
+  font-optical-sizing: auto;
+  font-style: normal;
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(34, 95, 171, 0.28), transparent 30%),
-    radial-gradient(circle at top right, rgba(255, 138, 61, 0.2), transparent 30%),
-    linear-gradient(180deg, #08111c 0%, #040910 100%);
+    radial-gradient(circle at top left, rgba(74, 130, 205, 0.28), transparent 30%),
+    radial-gradient(circle at top right, rgba(245, 191, 124, 0.22), transparent 30%),
+    linear-gradient(180deg, #edf4fb 0%, #dfeaf6 58%, #d5e3f0 100%);
 }
 
 #app {
@@ -40,8 +47,8 @@ a:hover {
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(31, 73, 125, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 73, 125, 0.06) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 90%);
 }
